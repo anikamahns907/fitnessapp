@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #F0F8FF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  position: relative;
+}
+
+.humanMap {
+  position: relative;
+  text-align: center;
+  
+}
+.humanPic {
+  height: 550px;
+  width: 600px;
+}
+
+.calves {
+  position: absolute;
+  bottom: 90px;
+  right: 110px;
+  font-size: 35px;
+}
+
+.chest {
+  position: absolute;
+  top: 80px;
+  left: 103px;
+  font-size: 35px;
+}
+.infoPopup {
+  width: 75%;
+  height: 30px;
+  margin-bottom: 25%;
+  text-align: center;
+  
+}
+.hoverGeneral {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.hoverGeneral:hover {
+  opacity: 0.2;
+}
+
+.popupMain {
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.226);
+  
+}
+
+.popupWhiteSquare {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  width: 60%;
+  height: 70%;
+  top: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+.xDiv {
+  width: 98%;
+  text-align: right;
+  padding-top: 10px;
+  
+}
+.workoutTitle {
+  margin-top: 0%;
+}
