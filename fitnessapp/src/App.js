@@ -1,6 +1,9 @@
 import './App.css';
 import human from "./human.jpg";
 import React from "react"; //imports react
+import calfRaise from "./calfRaises.jpg";
+import standingCR from "./standingCF.jpg";
+
 
 
 class App extends React.Component {
@@ -26,15 +29,28 @@ class App extends React.Component {
                     </span>
                   </div>
                 
+
                   <div className = "info" style={{
               opacity: this.state.calves ? 1 : 0,
               visibility: this.state.calves ? "visible" : "hidden",
               display: this.state.calves ? "block" : "none",
               }}>
                  <p className = "workoutTitle">Calf Workouts</p>
-                  <iframe width="500" height="300" src="https://www.youtube.com/embed/MuD58rqj8SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                 <p>Sprinting <br/> Uphill walking <br/> Jumping rope</p>
+                  <iframe className = "videoPos" width="400" height="200" src="https://www.youtube.com/embed/MuD58rqj8SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 <p className = "text"> Beneficial movements for bigger/stronger calves: <br/><br/>- Sprinting<br/> <br/> - Uphill walking<br/> <br/> - Jumping rope</p>
+                 <div className = "slideContainer">
+                 <div className = "imageContainer">
+                          <img src={calfRaise} className = "sliderImg" alt="calfraise"></img>
+                          <img src={standingCR} className = "sliderImg" alt = "stanndingCF"></img>
+
                   </div>
+
+                  </div>
+                  
+                  </div>
+
+
+
 
 
                   <div  className = "info" style={{
