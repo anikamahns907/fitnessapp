@@ -1,11 +1,9 @@
-
 import './App.css';
 import React from "react";
 import human from "./human.jpg";
-import calfRaise from "./Images/calfRaises.jpg";
+import calfRaise from "./calfRaises.jpg";
 import standingCR from "./standingCF.jpg";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+
 
 class App extends React.Component {
   state = {
@@ -66,13 +64,9 @@ class App extends React.Component {
 
                   <div className = "carousel">
                    <div className = "carouselInner" style={{backgroundImage:`url(${calfImages[this.state.currImg].img})`}}>
-                     <div className = "left">
-                      <ArrowBackIosIcon/>
-                     </div>
+                     <div className = "left"></div>
                      <div className = "center"></div>
-                     <div className = "right">
-                      <ArrowForwardIosIcon/>
-                     </div>
+                     <div className = "right"></div>
 
                    </div>
                    </div>
