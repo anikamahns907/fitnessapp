@@ -3,6 +3,8 @@ import React from "react";
 import human from "./human.jpg";
 import calfRaise from "./calfRaises.jpg";
 import standingCR from "./standingCF.jpg";
+import peckdeck from "./peckdeck.jpg";
+import benchPress from "./benchPress.jpg";
 
 
 class App extends React.Component {
@@ -11,12 +13,22 @@ class App extends React.Component {
     calves: false,
     chest: false,
     currImg: 0,
+    imagesArray: [{title: "calves", subtitle: "seated weighted calf raise", img: calfRaise}, 
+    {title: "standing calf raise", subtitle: "standing calf raise", img: standingCR},],
   };
   render() {
     const calfImages = [
       {title: "calves", subtitle: "seated weighted calf raise", img: calfRaise}, 
       {title: "standing calf raise", subtitle: "standing calf raise", img: standingCR},
     ]
+
+    const chestImages = [
+      {title: "peckdeck fly", subtitle: "Press your arms together in front of your chest with a slow, controlled movement. ", img: peckdeck},
+      {title: "bench press", subtitle: " Grip the bar with hands slightly wider than shoulder-width apart, so when you’re at the bottom of your move your hands are directly above your elbows.", img: benchPress},
+
+    ]
+
+    
   
     return (
       <div className="App">
@@ -63,10 +75,16 @@ class App extends React.Component {
                   </div>
 
                   <div className = "carousel">
-                   <div className = "carouselInner" style={{backgroundImage:`url(${calfImages[this.state.currImg].img})`}}>
-                     <div className = "left"></div>
+                   <div className = "carouselInner" style={{backgroundImage:`url(${this.state.imagesArray[this.state.currImg].img})`}}>
+                     <div className = "left" onClick={()=>  { this.state.currImg > 0 && this.setState({currImg: this.state.currImg - 1})}}>
+                     <span>&#8249;</span>
+
+                     </div>
                      <div className = "center"></div>
-                     <div className = "right"></div>
+                     <div className = "right" onClick={()=> {this.state.currImg < calfImages.length - 1 &&this.setState({currImg: this.state.currImg + 1})}}>
+                     <span>&#8250;</span>
+
+                     </div>
 
                    </div>
                    </div>
@@ -78,8 +96,8 @@ class App extends React.Component {
 
           <div className = "humanMap">
             <img className = "humanPic" alt = "human body" src = {human}/>
-            <p className = "calves hoverGeneral"  onClick={() => this.setState({popupActive: true, calves: true, }) }>calves</p>
-            <p className = "chest hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true}) }>chest</p>
+            <p className = "calves hoverGeneral"  onClick={() => this.setState({popupActive: true, calves: true,  imagesArray: calfImages}) }>calves</p>
+            <p className = "chest hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true, imagesArray: chestImages}) }>chest</p>
 
           </div>
 
