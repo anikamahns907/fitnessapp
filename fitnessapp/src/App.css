@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  cursor:auto;
 }
 
 .App-logo {
@@ -28,7 +29,8 @@
 .humanMap {
   position: relative;
   text-align: center;
-  
+  cursor:auto;
+
 }
 .humanPic {
   height: 550px;
@@ -128,6 +130,7 @@
   width: 98%;
   text-align: right;
   padding-top: 10px;
+  cursor:pointer;
   
 }
 .workoutTitle {
@@ -136,11 +139,12 @@
 
 .carousel {
   position: absolute;
-  width:35%;
-  height: 200px;
-  background-color: black;
-  left: 60%;
-  bottom: 45%;
+  width:40%;
+  height: 275px;
+  background-color: white;
+  left: 55%;
+  bottom: 35%;
+  text-decoration: underline;
 
 }
 
@@ -167,7 +171,8 @@
 .carouselInner .center {
   flex: 80%;
   height: 100%;
-
+  display: grid;
+  place-items:center;
 }
 
 .carouselInner .right {

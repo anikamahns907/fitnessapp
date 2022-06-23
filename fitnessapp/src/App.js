@@ -18,7 +18,7 @@ class App extends React.Component {
   };
   render() {
     const calfImages = [
-      {title: "calves", subtitle: "seated weighted calf raise", img: calfRaise}, 
+      {title: " Weighted seated calf raises", subtitle: "seated weighted calf raise", img: calfRaise}, 
       {title: "standing calf raise", subtitle: "standing calf raise", img: standingCR},
     ]
 
@@ -74,13 +74,19 @@ class App extends React.Component {
                   <p className = "text"> Beneficial movements for bigger/stronger chest:<br/><br/>- Sprinting<br/><br/>  - Uphill walking <br/><br/> - Jumping rope</p>
                   </div>
 
+                  
                   <div className = "carousel">
+                  <h6 >{this.state.imagesArray[this.state.currImg].title}</h6>
+
                    <div className = "carouselInner" style={{backgroundImage:`url(${this.state.imagesArray[this.state.currImg].img})`}}>
+                      
                      <div className = "left" onClick={()=>  { this.state.currImg > 0 && this.setState({currImg: this.state.currImg - 1})}}>
                      <span>&#8249;</span>
 
                      </div>
-                     <div className = "center"></div>
+
+                     <div className = "center">
+                     </div>
                      <div className = "right" onClick={()=> {this.state.currImg < calfImages.length - 1 &&this.setState({currImg: this.state.currImg + 1})}}>
                      <span>&#8250;</span>
 
