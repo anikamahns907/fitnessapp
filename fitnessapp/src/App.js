@@ -1,10 +1,10 @@
 import './App.css';
 import React from "react";
 import human from "./human.jpg";
-import calfRaise from "./calfRaises.jpg";
-import standingCR from "./standingCF.jpg";
-import peckdeck from "./peckdeck.jpg";
-import benchPress from "./benchPress.jpg";
+import calfRaise from "./calfImages/calfRaises.jpg";
+import standingCR from "./calfImages/standingCF.jpg";
+import peckdeck from "./chestImages/peckdeck.jpg";
+import benchPress from "./chestImages/benchPress.jpg";
 
 
 class App extends React.Component {
