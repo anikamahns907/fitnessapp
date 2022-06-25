@@ -14,41 +14,70 @@
   }
 }
 
-.App-header {
-  background-color: #F0F8FF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  position: relative;
-}
 
 .humanMap {
   position: relative;
   text-align: center;
   cursor:auto;
+  background-color: #F0F8FF;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+
 
 }
 .humanPic {
   height: 550px;
   width: 600px;
+  z-index: 1;
+  right: 50;
+  position: absolute;
 }
 
 .calves {
   position: absolute;
-  bottom: 90px;
-  right: 110px;
+  bottom: 23%;
+  left: 56.5%;
   font-size: 35px;
+  z-index: 2;
 }
 
 .chest {
   position: absolute;
-  top: 80px;
-  left: 103px;
+  top: 24%;
+  left: 36.3%;
   font-size: 35px;
+  z-index: 2;
+
+}
+
+.triceps {
+  position: absolute;
+  top: 25%;
+  left: 49%;
+  font-size: 20px;
+  z-index: 2;
+
+}
+.biceps {
+  position: absolute;
+  top: 26%;
+  left: 28%;
+  font-size: 20px;
+  z-index: 2;
+
+}
+.delts {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  font-size: 20px;
+  z-index: 2;
+
 }
 .info {
   width: 100%;
@@ -186,3 +215,46 @@
 
 }
 
+.tri1Rotateimg180 {
+  -webkit-transform:rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  height: auto;
+  width: 50px;
+z-index: 2;
+position: absolute;
+left:51%;
+top: 30%;
+
+
+}
+
+.bic1Rotateimg180 {
+  -webkit-transform:rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  height: auto;
+  width: 50px;
+z-index: 2;
+position: absolute;
+left:30%;
+top: 31%;
+}
+
+.del1Rotateimg180 {
+  -webkit-transform:rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  height: auto;
+  width: 50px;
+z-index: 2;
+position: absolute;
+left:31%;
+top: 25%;
+}

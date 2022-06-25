@@ -5,6 +5,7 @@ import calfRaise from "./calfImages/calfRaises.jpg";
 import standingCR from "./calfImages/standingCF.jpg";
 import peckdeck from "./chestImages/peckdeck.jpg";
 import benchPress from "./chestImages/benchPress.jpg";
+import arrow from "./arrow.png";
 
 
 class App extends React.Component {
@@ -28,11 +29,17 @@ class App extends React.Component {
 
     ]
 
+    const tricepImages = []
+    const bicepsImages = []
+    const deltsImages = []
+
+
+
+
     
   
     return (
       <div className="App">
-        <header className="App-header">
 
           <div className="popupMain "
           style={{
@@ -104,10 +111,18 @@ class App extends React.Component {
             <img className = "humanPic" alt = "human body" src = {human}/>
             <p className = "calves hoverGeneral"  onClick={() => this.setState({popupActive: true, calves: true,  imagesArray: calfImages}) }>calves</p>
             <p className = "chest hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true, imagesArray: chestImages}) }>chest</p>
+         <img src= {arrow} className = "tri1Rotateimg180"></img>
+         <img src= {arrow} className = "bic1Rotateimg180"></img>
+         <img src= {arrow} className = "del1Rotateimg180"></img>
+
+
+            <p className = "triceps hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true, imagesArray: tricepImages}) }>triceps </p>
+            <p className = "biceps hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true, imagesArray: bicepsImages}) }>biceps</p>
+            <p className = "delts hoverGeneral"  onClick={() => this.setState({popupActive: true, chest: true, imagesArray: deltsImages}) }>delts</p>
+
 
           </div>
 
-        </header>
       </div>
     );
   }
