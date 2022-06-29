@@ -86,24 +86,11 @@
 }
 .videoPos {
   position: absolute;
-  left: 20px;
+  left: 5%;
+  top: 20%;
 }
 
 
-.slideContainer {
-  width: 400px;
-  height: 200px;
-  position: relative;
-  right: 10px;
-  top: 80px;
-  text-align: center;
-}
-.sliderImg {
-  float: left;
-  margin:0px;
-  padding: 0px;
-
-}
 
 .imageContainer {
   width: 800px;
@@ -169,10 +156,10 @@
 .carousel {
   position: absolute;
   width:40%;
-  height: 275px;
+  height: 300px;
   background-color: white;
   left: 55%;
-  bottom: 35%;
+  bottom: 45%;
   text-decoration: underline;
 
 }
