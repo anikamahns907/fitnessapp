@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  cursor:auto;
+  cursor: auto;
 }
 
 .App-logo {
@@ -14,21 +14,17 @@
   }
 }
 
-
 .humanMap {
   position: relative;
   text-align: center;
-  cursor:auto;
-  background-color: #F0F8FF;
+  cursor: auto;
+  background-color: #f0f8ff;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-
-
-
 }
 .humanPic {
   height: 550px;
@@ -52,7 +48,6 @@
   left: 36.3%;
   font-size: 35px;
   z-index: 2;
-
 }
 
 .triceps {
@@ -61,7 +56,6 @@
   left: 49%;
   font-size: 20px;
   z-index: 2;
-
 }
 .biceps {
   position: absolute;
@@ -69,7 +63,6 @@
   left: 28%;
   font-size: 20px;
   z-index: 2;
-
 }
 .delts {
   position: absolute;
@@ -77,20 +70,16 @@
   left: 30%;
   font-size: 20px;
   z-index: 2;
-
 }
 .info {
   width: 100%;
   height: 93.5%;
-
 }
 .videoPos {
   position: absolute;
   left: 5%;
   top: 20%;
 }
-
-
 
 .imageContainer {
   width: 800px;
@@ -100,12 +89,9 @@
   -webkit-transition: left 2s;
   -moz-transition: left 2s;
   -o-transition: left 2s;
-  
-
-
 }
 .text {
-  position:absolute;
+  position: absolute;
   bottom: 70px;
   left: 20px;
   font-size: 15px;
@@ -127,7 +113,6 @@
   z-index: 15;
   position: fixed;
   background: rgba(0, 0, 0, 0.226);
-  
 }
 
 .popupWhiteSquare {
@@ -140,14 +125,12 @@
   top: 65px;
   overflow: hidden;
   white-space: nowrap;
-
 }
 .xDiv {
   width: 98%;
   text-align: right;
   padding-top: 10px;
-  cursor:pointer;
-  
+  cursor: pointer;
 }
 .workoutTitle {
   margin-top: 0%;
@@ -155,20 +138,29 @@
 
 .carousel {
   position: absolute;
-  width:40%;
-  height: 300px;
+  width: 40%;
+  height: 275px;
   background-color: white;
   left: 55%;
-  bottom: 45%;
-  text-decoration: underline;
-
+  bottom: 42%;
 }
 
+.carouselTitle {
+  text-decoration: underline;
+}
+
+.description {
+  height: 275px;
+  white-space: pre-wrap;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: smaller;
+}
 .carouselInner {
   height: 100%;
-  width:100%;
+  width: 100%;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
 }
@@ -179,16 +171,15 @@
   background-color: rgba(0, 0, 0, 0.6);
   display: grid;
   place-items: center;
-  color:white;
+  color: white;
   cursor: pointer;
-
 }
 
 .carouselInner .center {
   flex: 80%;
   height: 100%;
   display: grid;
-  place-items:center;
+  place-items: center;
 }
 
 .carouselInner .right {
@@ -197,51 +188,48 @@
   background-color: rgba(0, 0, 0, 0.6);
   display: grid;
   place-items: center;
-  color:white;
+  color: white;
   cursor: pointer;
-
 }
 
 .tri1Rotateimg180 {
-  -webkit-transform:rotate(30deg);
+  -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
   height: auto;
   width: 50px;
-z-index: 2;
-position: absolute;
-left:51%;
-top: 30%;
-
-
+  z-index: 2;
+  position: absolute;
+  left: 51%;
+  top: 30%;
 }
 
 .bic1Rotateimg180 {
-  -webkit-transform:rotate(30deg);
+  -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
   height: auto;
   width: 50px;
-z-index: 2;
-position: absolute;
-left:30%;
-top: 31%;
+  z-index: 2;
+  position: absolute;
+  left: 30%;
+  top: 31%;
 }
 
 .del1Rotateimg180 {
-  -webkit-transform:rotate(30deg);
+  -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
   height: auto;
   width: 50px;
-z-index: 2;
-position: absolute;
-left:31%;
-top: 25%;
+  z-index: 2;
+  position: absolute;
+  left: 31%;
+  top: 25%;
 }

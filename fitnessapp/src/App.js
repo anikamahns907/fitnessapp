@@ -1,5 +1,5 @@
-import "./App.css";
 import React from "react";
+import "./App.css";
 import human from "./human.jpg";
 import calfRaise from "./calfImages/calfRaises.jpg";
 import standingCR from "./calfImages/standingCF.jpg";
@@ -14,26 +14,46 @@ import lyingTriExt from "./tricepsImages/lyingTriExtensions.png";
 import ropePushAway from "./tricepsImages/ropePushaways.png";
 
 class App extends React.Component {
-  state = {
-    popupActive: false,
-    calves: false,
-    chest: false,
-    currImg: 0,
-    imagesArray: [
-      {
-        title: "calves",
-        subtitle: "seated weighted calf raise",
-        img: calfRaise,
-      },
-      {
-        title: "standing calf raise",
-        subtitle: "standing calf raise",
-        img: standingCR,
-      },
-    ],
-    workoutTitle: "",
-    videoLink: "",
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupActive: false,
+      calves: false,
+      chest: false,
+      currImg: 0,
+      imagesArray: [
+        {
+          title: "calves",
+          subtitle: "seated weighted calf raise",
+          img: calfRaise,
+        },
+        {
+          title: "standing calf raise",
+          subtitle: "standing calf raise",
+          img: standingCR,
+        },
+      ],
+      workoutTitle: "",
+      videoLink: "",
+    };
+  }
+
+  changingImages(direction) {
+    if (direction === "left") {
+      if (this.state.currImg === 0) {
+        this.setState({ currImg: this.state.imagesArray.length - 1 });
+      } else {
+        this.setState({ currImg: this.state.currImg - 1 });
+      }
+    } else if (direction === "right") {
+      if (this.state.currImg === this.state.imagesArray.length - 1) {
+        this.setState({ currImg: 0 });
+      } else {
+        this.setState({ currImg: this.state.currImg + 1 });
+      }
+    }
+  }
+
   render() {
     const calfImages = [
       {
@@ -153,7 +173,9 @@ class App extends React.Component {
             </div>
 
             <div className="carousel">
-              <h6>{this.state.imagesArray[this.state.currImg].title}</h6>
+              <p className="carouselTitle">
+                {this.state.imagesArray[this.state.currImg].title}
+              </p>
 
               <div
                 className="carouselInner"
@@ -165,10 +187,7 @@ class App extends React.Component {
               >
                 <div
                   className="left"
-                  onClick={() => {
-                    this.state.currImg > 0 &&
-                      this.setState({ currImg: this.state.currImg - 1 });
-                  }}
+                  onClick={() => this.changingImages("left")}
                 >
                   <span>&#8249;</span>
                 </div>
@@ -176,14 +195,15 @@ class App extends React.Component {
                 <div className="center"></div>
                 <div
                   className="right"
-                  onClick={() => {
-                    this.state.currImg < this.state.imagesArray.length - 1 &&
-                      this.setState({ currImg: this.state.currImg + 1 });
-                  }}
+                  onClick={() => this.changingImages("right")}
                 >
                   <span>&#8250;</span>
                 </div>
               </div>
+              <br></br>
+              <p className="description">
+                {this.state.imagesArray[this.state.currImg].subtitle}
+              </p>
             </div>
           </div>
         </div>
