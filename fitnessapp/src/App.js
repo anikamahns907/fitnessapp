@@ -18,8 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       popupActive: false,
-      calves: false,
-      chest: false,
+      bodyPart: "calves",
       currImg: 0,
       imagesArray: [
         {
@@ -35,6 +34,7 @@ class App extends React.Component {
       ],
       workoutTitle: "",
       videoLink: "",
+      activities: ["sprinting", "inclined sprints/walks", "jumping rope"],
     };
   }
 
@@ -99,7 +99,7 @@ class App extends React.Component {
       {
         title: "Diamond Pushups",
         subtitle:
-          "Get on all fours with your hands together under your chest. Position your index fingers and thumbs so they’re touching, forming a diamond shape, and extend your arms so that your body is elevated and forms a straight line from your head to your feet.",
+          "Get on all fours with your hands together under your chest. Position your index fingers and thumbs so they’re touching, forming a diamond shape, and extend your arms so that your body is elevated and forms a straight s from your head to your feet.",
         img: diamondPU,
       },
       {
@@ -124,6 +124,16 @@ class App extends React.Component {
     const bicepsImages = [];
     const deltsImages = [];
 
+    const calfActivities = [
+      "sprinting",
+      "inclined sprints/walks",
+      "jumping rope",
+    ];
+    const chestActivities = [
+      "single-leg/incline/elevated/weighted push-ups",
+      "moutain climbers",
+      "football, baseball, swimming",
+    ];
     return (
       <div className="App">
         <div
@@ -163,10 +173,11 @@ class App extends React.Component {
                 allowfullscreen
               ></iframe>
               <p className="text">
-                Beneficial movements for bigger/stronger calves: <br />
-                <br />- Sprinting
-                <br /> <br /> - Uphill walking
-                <br /> <br /> - Jumping rope
+                Additional beneficial movements for bigger/stronger{" "}
+                {this.state.bodyPart} :
+                <br /> &nbsp;&nbsp;&nbsp;&nbsp;- {this.state.activities[0]}
+                <br /> &nbsp;&nbsp;&nbsp;&nbsp;- {this.state.activities[1]}
+                <br /> &nbsp;&nbsp;&nbsp;&nbsp;- {this.state.activities[2]}
               </p>
 
               <div className="sliding"></div>
@@ -233,6 +244,8 @@ class App extends React.Component {
                 imagesArray: chestImages,
                 workoutTitle: "Chest Workouts",
                 videoLink: "https://www.youtube.com/embed/BkS1-El_WlE",
+                activities: chestActivities,
+                bodyPart: "chest",
               })
             }
           >
@@ -250,6 +263,9 @@ class App extends React.Component {
                 chest: true,
                 imagesArray: tricepImages,
                 workoutTitle: "Tricep Workouts",
+                videoLink: "https://www.youtube.com/watch?v=89e518dl4I8",
+                activities: chestActivities,
+                bodyPart: "chest",
               })
             }
           >

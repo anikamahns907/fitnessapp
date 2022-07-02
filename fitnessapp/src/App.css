@@ -93,9 +93,17 @@
 .text {
   position: absolute;
   bottom: 70px;
-  left: 20px;
+  left: 65px;
   font-size: 15px;
   text-align: left;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px; /* fallback */
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  color: black;
+  line-height: 3em;
 }
 
 .hoverGeneral {
