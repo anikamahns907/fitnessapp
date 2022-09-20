@@ -123,6 +123,8 @@ class App extends React.Component {
     ];
     const bicepsImages = [];
     const deltsImages = [];
+    const quadImages = [];
+    const hamstringImages = [];
 
     const calfActivities = [
       "sprinting",
@@ -230,6 +232,8 @@ class App extends React.Component {
                 imagesArray: calfImages,
                 workoutTitle: "Calf Workouts",
                 videoLink: "https://www.youtube.com/embed/MuD58rqj8SE",
+                activities: calfActivities,
+                bodyPart: "calf",
               })
             }
           >
@@ -263,9 +267,8 @@ class App extends React.Component {
                 chest: true,
                 imagesArray: tricepImages,
                 workoutTitle: "Tricep Workouts",
-                videoLink: "https://www.youtube.com/watch?v=89e518dl4I8",
-                activities: chestActivities,
-                bodyPart: "chest",
+                videoLink: "https://www.youtube.com/embed/89e518dl4I8",
+                bodyPart: "tricep",
               })
             }
           >
@@ -279,6 +282,8 @@ class App extends React.Component {
                 chest: true,
                 imagesArray: bicepsImages,
                 workoutTitle: "Bicep Workouts",
+                videoLink: "https://www.youtube.com/embed/89e518dl4I8",
+                bodyPart: "bicep",
               })
             }
           >
@@ -292,10 +297,43 @@ class App extends React.Component {
                 chest: true,
                 imagesArray: deltsImages,
                 workoutTitle: "Delt Workouts",
+                videoLink: "https://www.youtube.com/embed/89e518dl4I8",
+                bodyPart: "delt",
               })
             }
           >
             delts
+          </p>
+
+          <p
+            className="hamstrings hoverGeneral"
+            onClick={() =>
+              this.setState({
+                popupActive: true,
+                hamstring: true,
+                imagesArray: hamstringImages,
+                workoutTitle: "Hamstring Workouts",
+                videoLink: "https://www.youtube.com/embed/MuD58rqj8SE",
+                bodyPart: "hamstring",
+              })
+            }
+          >
+            hamstrings
+          </p>
+          <p
+            className="quads hoverGeneral"
+            onClick={() =>
+              this.setState({
+                popupActive: true,
+                quad: true,
+                imagesArray: quadImages,
+                workoutTitle: "Quad Workouts",
+                videoLink: "https://www.youtube.com/embed/MuD58rqj8SE",
+                bodyPart: "quad ",
+              })
+            }
+          >
+            quads
           </p>
         </div>
       </div>
